@@ -10,15 +10,16 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# Object detection for Wind turbines
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Detection of wind turbines using Fater RCNN on Google Earth Imagery
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+## Training a CNN based detection model
+Object detection model which we trained is a CNN based model with specific backbone
+Imagery used for training is freely available high resolution Google Earth Imagery (with resolution ranging up to .5m, with comparatively higher resolution in European countries (.2 to .3 m) and Japan (.2m) and updated latest in 2021 varying from area to area)
+Model Input dataset consists of annotated image chipsets (bounding box around a sample turbines) preferably 256*256 dimension and specific batch size (according to GPU availability),
+these chipsets are then segregated into two groups preferably in ratio 9:1 with 9 being training data and 1 being validation data
+CNN model is then trained in Conda environment using Tensorflow based python libraries (pytorch, numpy etc.) until the required training loss is achieved (preferable loss<.005)
 
 ### Header 3
 
